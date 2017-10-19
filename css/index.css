@@ -100,9 +100,18 @@
 	float: right;
 }
 .wholebox nav .navbody .navright li:nth-child(4) a{
-	padding-left: 10px;
-	border-left: 1px solid #cccccc;
+	
+	
 	margin-right: 0px;
+	
+	
+}
+.wholebox nav .navbody .navright li:nth-child(4) a i{
+	
+	border-left: 1px solid #cccccc;
+	padding-left: 10px;
+	
+	
 	
 }
 .wholebox nav .navbody .navright li:nth-child(5) a{
