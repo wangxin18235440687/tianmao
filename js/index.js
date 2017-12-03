@@ -2,9 +2,38 @@
 * @Author: Administrator
 * @Date:   2017-11-08 18:26:00
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-11-21 18:31:46
+* @Last Modified time: 2017-12-03 20:05:30
 */
-window.onload=function(){
+$(document).ready(function() {
+// banner开始
+/*{
+	let arr=['#0865e5','#e8e8e8','#8b6846','#a4c6a6','#7d27db','#e8e8e8'];
+	let t;
+	let num=0;
+	t=setInterval(fn, 4000);
+	function fn(){
+		num++;
+		if(num==$('.banjs').length){
+		num=0;
+		}
+		$('.banjs').fadeOut('1000',function(){
+			
+		});
+		// $('.banjs').each(function(index, e) {
+		// 	e.style.display='none';
+		// });
+		$(".bigboxbody").animate(function(){
+			$(".bigboxbody").css({ "background": arr[num]});
+		}, 1000)
+		
+		$('.banjs').eq(num).fadeIn('1000',function(){
+			
+		});
+
+	}
+	
+}*/
+
 {
 let banjs=document.getElementsByClassName('banjs');
 let xiaoyuan=document.getElementsByClassName('xiaoyuan')[0];
@@ -54,10 +83,11 @@ for(let i=0;i<btn.length;i++){
 			num=i;
 		}
 		t=setInterval(fn, 4000);
-		btn[i].onmouseover=function(){
+		btn[i].onmouseenter=function(){
 			clearInterval(t);
 		}
-		btn[i].onmouseout=function(){
+		btn[i].onmouseleave=function(){
+			clearInterval(t);
 			t=setInterval(fn, 4000);
 		}
 	}
@@ -256,4 +286,4 @@ louc.forEach(function(dom,index){
 
 
 
-}
+});
